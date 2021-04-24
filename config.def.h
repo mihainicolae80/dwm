@@ -33,8 +33,8 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Firefox",  		NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Xfce4-appfinder",  	NULL,       NULL,       0,       1,           -1 },
 };
 
 /* layout(s) */
@@ -71,10 +71,10 @@ static const char *thunarcmd[]  = { "thunar", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-    { MODKEY,                       XK_y,      spawn,          {.v = firefoxcmd } },
-    { MODKEY,                       XK_t,      spawn,          {.v = thunarcmd } },
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,             			XK_Return, spawn,          {.v = termcmd } },
+    	{ MODKEY,                       XK_y,      spawn,          {.v = firefoxcmd } },
+    	{ MODKEY,                       XK_t,      spawn,          {.v = thunarcmd } },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,             		XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
