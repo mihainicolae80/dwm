@@ -1,0 +1,16 @@
+# remove old input handler
+sudo pacman -Rsn xf86-input-synaptics
+
+# install libinput
+sudo pacman -Syu xf86-input-libinput
+
+# create conf file like this:
+/etc/X11/xorg.conf.d/30-touchpad.conf
+Section "InputClass"
+        Identifier "MyTouchpad"
+        MatchIsTouchpad "on"
+        Driver "libinput"
+        Option "Tapping" "on"
+EndSection
+
+# reboot / restart X session

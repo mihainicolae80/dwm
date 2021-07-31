@@ -1,0 +1,8 @@
+# disable / enable black screen after N seconds
+xset dpms off
+xset dpms on
+xset q # show current x settings (DPMS at bottom)
+
+# disable / enable screen saver (yet another black screen probably)
+xset s off
+xset s on
